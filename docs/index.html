@@ -5,76 +5,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    .loveMargin {
-  width: 54vw;
-  height: 54vw;
-  background: linear-gradient(148deg, #f00, transparent 2px), linear-gradient(45deg, pink 0px, transparent 3px);
-  background-size: 1.5vw 1.5vw;
-  animation: scaleDraw 3s infinite;
--webkit-animation: scaleDraw 1.5s infinite;
-  position: relative;
-  rotate: 45deg;
-  transform-origin: center;
-  margin: 40vw auto;
-}
-
-.loveMargin::after {
-  content: '';
-  position: absolute;
-  left: 0px;
-  top: -27vw;
-  width: 54vw;
-  height: 27vw;
-  background: linear-gradient(148deg, #f00, transparent 2px), linear-gradient(45deg, pink 0px, transparent 3px);
-  background-size: 1.5vw 1.5vw;
-  border-radius: 54vw 54vw 0 0;
-}
-
-.loveMargin::before {
-  content: '';
-  position: absolute;
-  left: -27vw;
-  width: 27vw;
-  height: 54vw;
-  background: linear-gradient(148deg, #f00, transparent 2px), linear-gradient(45deg, pink 0px, transparent 3px);
-  background-size: 1.5vw 1.5vw;
-  border-radius: 54vw 0 0 54vw;
-
-}
-@keyframes scaleDraw {
-
-/*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
-
-0% {
-
-transform: scale(1);
-/*开始为原始大小*/
-
-}
-
-50% {
-
-transform: scale(1.1);
-
-/*放大1.1倍*/
-
-}
-
-100% {
-
-transform: scale(1);
-
-/*开始为原始大小*/
-
-}
-
-}
-
-
-</style>
+  <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-  <div class="loveMargin"></div>
+  <div class="love-outside">
+    <div class="loveMargin"></div>
+  </div>
+  <div class="bot">
+    <button class="heart"></button>
+    <button class="heart"></button>
+    <button class="heart"></button>
+    <button class="heart"></button>
+    <button class="heart"></button>
+    <button class="heart"></button>
+    <button class="heart"></button>
+    <button class="heart"></button>
+    <button class="heart"></button>
+  </div>
+  <script  type="text/javascript">
+
+    
+  </script>
 </body>
+
 </html>

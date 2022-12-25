@@ -1,0 +1,203 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #000;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  padding-top: 30vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.love-outside {
+  transform: rotate(45deg);
+  width: 54vw;
+  transform-origin: center;
+  margin: 0 auto;
+}
+
+.loveMargin {
+  width: 54vw;
+  height: 54vw;
+  background: linear-gradient(148deg, #f00, transparent 2px), linear-gradient(45deg, pink 0px, transparent 3px);
+  background-size: 1.5vw 1.5vw;
+  -webkit-animation: scaleDraw 1.5s infinite;
+          animation: scaleDraw 1.5s infinite;
+  position: relative;
+  /* transform: rotate(45deg); */
+  transform-origin: center;
+
+}
+
+.loveMargin::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: -27vw;
+  width: 54vw;
+  height: 27vw;
+  background: linear-gradient(148deg, #f00, transparent 2px), linear-gradient(45deg, pink 0px, transparent 3px);
+  background-size: 1.5vw 1.5vw;
+  border-radius: 54vw 54vw 0 0;
+}
+
+.loveMargin::before {
+  content: '';
+  position: absolute;
+  left: -27vw;
+  width: 27vw;
+  height: 54vw;
+  background: linear-gradient(148deg, #f00, transparent 2px), linear-gradient(45deg, pink 0px, transparent 3px);
+  background-size: 1.5vw 1.5vw;
+  border-radius: 54vw 0 0 54vw;
+
+}
+
+@-webkit-keyframes scaleDraw {
+
+  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+
+  0% {
+
+    transform: scale(1);
+
+    /*开始为原始大小*/
+
+  }
+
+  50% {
+
+    transform: scale(1.1);
+
+    /*放大1.1倍*/
+
+  }
+
+  100% {
+
+    transform: scale(1);
+
+    /*开始为原始大小*/
+
+  }
+
+}
+
+@keyframes scaleDraw {
+
+  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+
+  0% {
+
+    transform: scale(1);
+
+    /*开始为原始大小*/
+
+  }
+
+  50% {
+
+    transform: scale(1.1);
+
+    /*放大1.1倍*/
+
+  }
+
+  100% {
+
+    transform: scale(1);
+
+    /*开始为原始大小*/
+
+  }
+
+}
+
+.bot {
+  height: 400px;
+  padding: 30px;
+  margin-top: 60px;
+  background-image: linear-gradient(to bottom, rgb(234, 124, 240), rgb(23, 221, 40));
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.heart {
+
+  background-color: pink;
+  height: 50px;
+  width: 50px;
+  transform: rotate(-45deg);
+  margin-bottom: 40px;
+  margin-right: 50px;
+}
+
+.heart:after,
+.heart:before {
+  background-color: pink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 25px;
+}
+
+.heart:before {
+  top: -25px;
+  left: 0px;
+}
+
+button {
+  z-index: 1;
+  border: none;
+  outline:none;
+}
+
+button:focus {
+  cursor: pointer;
+  -webkit-animation: jelly 0.5s;
+  animation: jelly 0.5s;
+}
+
+@-webkit-keyframes jelly {
+
+  0%,
+  100% {
+    transform: scale(1, 1) rotate(-45deg);
+  }
+
+  25%,
+  75% {
+    transform: scale(0.9, 1.1) rotate(-45deg);
+  }
+
+  50% {
+    transform: scale(1.1, 0.9) rotate(-45deg);
+  }
+}
+
+@keyframes jelly {
+
+  0%,
+  100% {
+    transform: scale(1, 1) rotate(-45deg);
+  }
+
+  25%,
+  75% {
+    transform: scale(0.9, 1.1) rotate(-45deg);
+  }
+
+  50% {
+    transform: scale(1.1, 0.9) rotate(-45deg);
+  }
+}
